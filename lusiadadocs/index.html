@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Lusiada Docs</title>
+
+    <!-- Core js files -->
+
+    <!-- Core css files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/classes.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/headers.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+    
+</head>
+<body onload="user_name()">
+
+  <style>
+    #intro{
+      background: url(img/lusiada_background.jpg) no-repeat center center;
+      height: 100vh;
+      text-align: center;
+      background-size: cover;
+    }
+  </style>
+
+    
+    <div id="intro" class="bg-image intro-font">  
+    <div class="container">
+      <div class="row">
+              <div class="col align-middle">
+                <div class="intro-message">
+                  <ul class="list-inline">
+                    <li>
+                    
+                      <div class="col-lg-12 p-5 pb-0">
+                        <div class="text-light justify-content-cnter">
+                          
+                          <a href="login.html">
+                          <img src="img/logoul_.png">
+                          </a>
+                          <h1 class="py-2 intro-font">Universidade Lusiada de Lisboa</h1>
+                          <li class="text-light" aria-disabled="true">
+                            <p class="disable-links">Utilizador: </a>
+                            <a id="text" aria-disabled="true"></a>
+                          </li>
+                          
+                          
+                          <hr class="justify-content-cnter hr-color">
+                          
+                          <ul class="list-inline intro-buttons">
+                            <li> 
+                              <a href="#blank" class="btn btn-outline-light btn-lg  me-2">Forum Lusiada</a>
+                              <a href="lusiadadocs.html" class="btn btn-outline-light btn-lg me-2">Lusiada Docs</a>
+                              <a id="logout" href="login.html" class="btn btn-outline-danger btn-lg">Log out</a> 
+                            </li>
+                          </ul>
+                          
+                         
+                         
+                          <!--
+      <a target="_blank" href="img/logoul_.png">aqui</a> Para fazer Download :)<li> <a href="#blank" class="btn btn-light outline">Lusioada Docs</a> </li>
+    ->
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              
+            </div>
+
+    </div>-->
+    
+    
+  </div>
+
+  <script>
+$(document).ready(function(){
+    $("#logout").click(function(){
+      sessionStorage.clear();
+      location.replace("index.html");
+      })
+    });
+
+    function user_name(){
+            var user = JSON.parse(sessionStorage.getItem("user"));
+            console.log('User: ', user.username);
+            document.getElementById("text").innerHTML = user.username;
+            let timeout = setTimeout(RELOAD, 3600000);
+          }
+
+  </script>
+
+</body>
+</html>

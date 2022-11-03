@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Lusiada Docs</title>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Core js files -->
+
+    <!-- Core css files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/classes.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/headers.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+
+    <script src="js/login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body onload="user_name()" id="intro"  class="intro-header bg-image">
+
+  <style>
+    #intro{
+      background: url(img/lusiada_background.jpg) no-repeat center;
+      height: 100vh;
+      text-align: center;
+      background-size: cover;
+    }
+  </style>
+
+
+    <!--
+		<div id="intro" class="bg-image img-fluid container-fluid" no-repeat center center>-->
+
+      
+		<div class="container">
+  
+			
+			<div class="row">
+
+        <div class="col-md-5 mx-auto intro-font intro-message">
+                <div class="intro-message">
+                  <ul class="list-inline">
+                    <li>
+                    
+                      <div class="col-lg-12 down-pad">
+                        <div class="margin-top text-white justify-content-cnter">
+                          
+                          <a href="index.html">
+                          <img src="img/logoul_.png"></a>
+                          <h1 class="py-2 intro-font">Universidade Lusiada de Lisboa</h1>
+                          <!--
+                          <ul>
+                          <li> 
+                            <a href="#blank" class="btn btn-light btn-lg outline col">Log in</a>
+                            <a href="#blank" class="btn btn-light btn-lg outline col">Log in</a> 
+                          </li>
+                        
+                          </ul>-->
+                          <!--
+                          <hr class="intro-divider justify-content-cnter">
+                          <ul class="list-inline ">
+                            
+                            <li> <a href="#blank" class="btn btn-light btn-lg outline">Log in</a> </li>
+                            
+                          </ul>-->
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+        <div class="col-md-6 text-bg-light intro-message">
+          <div class="modal modal-signin position-static d-block py-2" tabindex="-1" role="dialog" id="modalSignin">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content rounded-4 shadow">
+
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+                <h1 class="fw-bold mb-0 fs-2">Faça Login</h1>
+                <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                </div>
+
+              <div class="modal-body p-5 pt-0 form-signin">
+
+                <form>
+
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <!--
+                  <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" onclick="validate()">Sign in</button>-->
+                  <input type="button" class="btn btn-primary w-100 mb-2 rounded-3 btn-lg" value="Login" id="submit" onclick="validate()"/>
+                  <!--<small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>--
+                  <hr class="my-4">
+                  <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                  <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+                    <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+                    Sign up with Twitter
+                  </button>
+                  <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                    <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+                    Sign up with Facebook
+                  </button>
+                  <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                    <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+                    Sign up with GitHub
+                  </button>-->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!--
+              <div class="col-md-5 mx-auto intro-font">
+                <div class="intro-message">
+                  <ul class="list-inline">
+                    <li>
+                    
+                      <div class="col-lg-12 down-pad">
+                        <div class="margin-top text-white justify-content-cnter">
+                          
+                          <img src="img/logoul_.png">
+                          <h1 class="py-2 intro-font">Universidade Lusiada de Lisboa</h1>
+                          <!-
+                          <ul>
+                          <li> 
+                            <a href="#blank" class="btn btn-light btn-lg outline col">Log in</a>
+                            <a href="#blank" class="btn btn-light btn-lg outline col">Log in</a> 
+                          </li>
+                        
+                          </ul>-->
+                          <!--
+                          <hr class="intro-divider justify-content-cnter">
+                          <ul class="list-inline ">
+                            
+                            <li> <a href="#blank" class="btn btn-light btn-lg outline">Log in</a> </li>
+                            
+                          </ul>->
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            -->
+
+
+              
+            </div>
+
+		</div>
+		
+    
+	</div>
+
+  <script>
+    
+    $(document).ready(function(){
+        let sessionData = sessionStorage.getItem("user");
+        console.log(sessionData);
+        console.log('User: ', user.username)
+    });
+
+    function user_name(){
+            var user = JSON.parse(sessionStorage.getItem("user"));
+            //document.getElementById("text").innerHTML = user.username;
+            //let timeout = setTimeout(RELOAD, 3600000);
+            var i = 0;
+            console.log('User: ', user.username);
+            
+              /*var d = document.getElementById("intro");
+              var w = window.innerWidth;
+              console.log(w);
+              if (w < 400){
+                //d.classList.add("intro-header");
+                //d.addClass("intro-header");
+
+              }
+              //d.classList.remove("intro-header");
+              d.removeClass("intro-header") ;
+              */
+            
+          }
+
+    $(document).ready(function(){
+        let w = window.screen.width;
+        let l = window.screen.length;
+        console.log(w);
+        if (w < 400 || l < 400){
+          //d.classList.add("intro-header");
+          //d.addClass("intro-header");
+          $( "body" ).addClass( "intro-header" );
+        }
+          //d.classList.remove("intro-header");
+          //d.removeClass("intro-header") ;
+          //$( "body" ).removeClass( "intro-header" );
+      });
+/*
+  function (){
+    var d = document.getElementById("#intro"),
+    var w = window.innerWidth,
+    console.log(w)
+    if (w < 400){
+      d.classList.add("intro-header")
+    }
+    else{
+      d.classList.remove("intro-header")
+    }
+  };*/
+
+  </script>
+
+</body>
+</html>
